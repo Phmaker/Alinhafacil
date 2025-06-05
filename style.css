@@ -1,0 +1,151 @@
+:root {
+  --bg-dark: #1e1e1e;
+  --bg-card: linear-gradient(135deg, #000000, #222222);
+  --primary-color: #e67e22;
+  --hover-color: #ff8000;
+  --text-light: #ffffff;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-dark);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 420px;
+  padding: 30px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 128, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 6px 18px rgba(255, 128, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+  color: var(--text-light);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
